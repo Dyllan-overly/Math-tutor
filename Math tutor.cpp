@@ -11,8 +11,20 @@ int main()
 {
     double num1 = (1 + (rand() % 500));
     double num2 = (1 + (rand() % 500));
-    double sum = num1 + num2; 
-    cout << "The sum of " << num1 << " and " << num2 << " is " << sum << endl;
+    int correctAnswer = num1 + num2; 
+    int userAnswer;
+
+    std::cout << "What is " << num1 << " + " << num2 << "? ";
+    std::cin >> userAnswer;
+
+    if (userAnswer == correctAnswer) {
+        cout << "Correct!" << endl;
+    }
+    else {
+        cout << "Incorrect. The correct answer is " << correctAnswer << endl;
+    }
     return 0;
+// having an issue with the random number generator it keeps pumping out the same number if i debug again but changes
+//when i revise the number it is allowed to pick from and recompile.
 }
 
